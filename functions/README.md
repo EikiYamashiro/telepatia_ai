@@ -24,12 +24,12 @@ export GEMINI_API_KEY="your-gemini-key-here"
 #### **2. Firebase Configuration (Optional - has fallback)**
 ```bash
 # PowerShell
-$env:FIREBASE_PROJECT_ID="telepatia-a2b3d"
-$env:FIREBASE_STORAGE_BUCKET="telepatia-a2b3d.appspot.com"
+$env:FIREBASE_PROJECT_ID="your-project-id"
+$env:FIREBASE_STORAGE_BUCKET="your-project-id.appspot.com"
 
 # CMD
-set FIREBASE_PROJECT_ID=telepatia-a2b3d
-set FIREBASE_STORAGE_BUCKET=telepatia-a2b3d.appspot.com
+set FIREBASE_PROJECT_ID=your-project-id
+set FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
 ```
 
 ### **🔧 Local Development Configuration:**
@@ -38,8 +38,8 @@ set FIREBASE_STORAGE_BUCKET=telepatia-a2b3d.appspot.com
 ```bash
 # PowerShell - Execute before running the emulator
 $env:GEMINI_API_KEY="your-gemini-key-here"
-$env:FIREBASE_PROJECT_ID="telepatia-a2b3d"
-$env:FIREBASE_STORAGE_BUCKET="telepatia-a2b3d.appspot.com"
+$env:FIREBASE_PROJECT_ID="your-project-id"
+$env:FIREBASE_STORAGE_BUCKET="your-project-id.appspot.com"
 $env:FIREBASE_STORAGE_EMULATOR_HOST="http://localhost:9199"
 $env:FUNCTIONS_EMULATOR="true"
 
@@ -54,8 +54,8 @@ cp env.example .env
 
 # Edit the .env file with your keys
 GEMINI_API_KEY=your-gemini-key-here
-FIREBASE_PROJECT_ID=telepatia-a2b3d
-FIREBASE_STORAGE_BUCKET=telepatia-a2b3d.appspot.com
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
 FIREBASE_STORAGE_EMULATOR_HOST=http://localhost:9199
 FUNCTIONS_EMULATOR=true
 ```
@@ -67,8 +67,8 @@ Configure in Firebase Console:
 2. **Environment variables**
 3. Add:
    - `GEMINI_API_KEY`: your-gemini-key-here
-   - `FIREBASE_PROJECT_ID`: telepatia-a2b3d
-   - `FIREBASE_STORAGE_BUCKET`: telepatia-a2b3d.appspot.com
+   - `FIREBASE_PROJECT_ID`: your-project-id
+   - `FIREBASE_STORAGE_BUCKET`: your-project-id.appspot.com
 
 ### **🔍 Configuration Verification:**
 
@@ -90,13 +90,13 @@ $env:GEMINI_API_KEY="your-gemini-key-here"
 #### **Error: "Bucket does not exist"**
 ```bash
 # Solution: Configure the correct bucket
-$env:FIREBASE_STORAGE_BUCKET="telepatia-a2b3d.appspot.com"
+$env:FIREBASE_STORAGE_BUCKET="your-project-id.appspot.com"
 ```
 
 #### **Error: "Project not found"**
 ```bash
 # Solution: Configure the correct project
-$env:FIREBASE_PROJECT_ID="telepatia-a2b3d"
+$env:FIREBASE_PROJECT_ID="your-project-id"
 ```
 
 ### **🚀 Start the Project:**

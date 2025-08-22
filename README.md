@@ -8,6 +8,14 @@ Telepatía is an intelligent medical assistant that uses AI to:
 - **🧠 Generate medical diagnoses** using Google Gemini AI
 - **📱 Modern web interface** built with Angular
 
+## 🎥 Demo Video
+
+Watch Telepatía in action:
+
+[![Telepatía Demo](https://img.youtube.com/vi/3ZKU1P7J70o/0.jpg)](https://youtu.be/3ZKU1P7J70o)
+
+**[▶️ Watch Demo on YouTube](https://youtu.be/3ZKU1P7J70o)**
+
 ## 🏗️ Architecture
 
 ```
