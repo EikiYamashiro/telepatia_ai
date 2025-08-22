@@ -52,7 +52,7 @@ telepatia/
 
 ### **1. Clone the Repository**
 ```bash
-git clone [<repository-url>](https://github.com/EikiYamashiro/telepatia_ai/)
+git clone (https://github.com/EikiYamashiro/telepatia_ai/)
 cd telepatia_ai
 ```
 
