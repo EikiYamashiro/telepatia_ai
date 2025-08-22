@@ -12,9 +12,22 @@ Telepatía is an intelligent medical assistant that uses AI to:
 
 Watch Telepatía in action:
 
-[![Telepatía Demo](https://img.youtube.com/vi/3ZKU1P7J70o/0.jpg)](https://youtu.be/3ZKU1P7J70o)
+<div align="center">
+  <a href="https://youtu.be/3ZKU1P7J70o" target="_blank">
+    <img src="https://img.youtube.com/vi/3ZKU1P7J70o/maxresdefault.jpg" 
+         alt="Telepatía Demo Video" 
+         width="600" 
+         style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s ease-in-out;"
+         onmouseover="this.style.transform='scale(1.02)'" 
+         onmouseout="this.style.transform='scale(1)'">
+  </a>
+  
+  <br><br>
+  
+  [▶️ **Click to Watch Full Demo on YouTube**](https://youtu.be/3ZKU1P7J70o)
+</div>
 
-**[▶️ Watch Demo on YouTube](https://youtu.be/3ZKU1P7J70o)**
+> 💡 **Tip**: Click on the video thumbnail above to watch the full demo on YouTube!
 
 ## 🏗️ Architecture
 
