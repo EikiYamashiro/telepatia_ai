@@ -52,8 +52,8 @@ telepatia/
 
 ### **1. Clone the Repository**
 ```bash
-git clone <repository-url>
-cd telepatia
+git clone [<repository-url>](https://github.com/EikiYamashiro/telepatia_ai/)
+cd telepatia_ai
 ```
 
 ### **2. Setup Backend (Firebase Functions)**
