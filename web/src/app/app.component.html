@@ -1,0 +1,106 @@
+<div class="app-container">
+  <!-- Header elegante -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <span class="logo-icon">⚕️</span>
+        <h1>Telepatia</h1>
+      </div>
+      <p class="subtitle">Pipeline Médico Inteligente</p>
+    </div>
+  </header>
+
+  <!-- Container principal -->
+  <main class="main-content">
+    <!-- Seção de entrada -->
+    <section class="input-section">
+      <h2>Análise de Dados Médicos</h2>
+      
+      <!-- Opção 1: URL do áudio -->
+      <div class="input-group">
+        <label>URL do Áudio</label>
+        <div class="input-wrapper">
+          <input 
+            [(ngModel)]="audioUrl" 
+            placeholder="Cole aqui a URL do arquivo de áudio..."
+            class="input-field"
+          >
+          <button 
+            (click)="onTranscribe()" 
+            [disabled]="loading() || !audioUrl.trim()"
+            [class.loading]="loading()"
+            class="btn btn-primary"
+          >
+            <span *ngIf="!loading()">🎵 Transcrever</span>
+            <span *ngIf="loading()">Transcrevendo...</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Separador elegante -->
+      <div class="separator">
+        <span>ou</span>
+      </div>
+
+      <!-- Opção 2: Texto livre -->
+      <div class="input-group">
+        <label>Texto Médico</label>
+        <textarea 
+          [(ngModel)]="freeText" 
+          rows="4" 
+          placeholder="Digite ou cole o texto médico aqui..."
+          class="textarea-field"
+        ></textarea>
+        <button 
+          (click)="onExtract()" 
+          [disabled]="loading() || !freeText.trim()"
+          [class.loading]="loading()"
+          class="btn btn-primary"
+        >
+          <span *ngIf="!loading()">🔍 Extrair Dados</span>
+          <span *ngIf="loading()">Extraindo...</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Seção de resultados -->
+    <section class="results-section" *ngIf="transcription() || medicalJson()">
+      <h2>Resultados da Análise</h2>
+      
+      <!-- Transcrição -->
+      <div class="result-card" *ngIf="transcription()">
+        <h3>📝 Transcrição</h3>
+        <div class="result-content">{{ transcription() }}</div>
+      </div>
+
+      <!-- Extração estruturada -->
+      <div class="result-card" *ngIf="medicalJson()">
+        <h3>📊 Dados Estruturados</h3>
+        <div class="result-content json-content">{{ medicalJson() }}</div>
+        <button 
+          (click)="onDiagnose()" 
+          [disabled]="!medicalObj() || loading()"
+          [class.loading]="loading()"
+          class="btn btn-success"
+        >
+          <span *ngIf="!loading()">🧠 Gerar Diagnóstico</span>
+          <span *ngIf="loading()">Gerando...</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Seção de diagnóstico -->
+    <section class="diagnosis-section" *ngIf="diagnosis()">
+      <h2>🏥 Diagnóstico Clínico</h2>
+      <div class="diagnosis-card">
+        <div class="diagnosis-content">{{ diagnosis() }}</div>
+      </div>
+    </section>
+
+    <!-- Mensagens de erro -->
+    <div class="error-message" *ngIf="error()">
+      <span class="error-icon">⚠️</span>
+      <span>{{ error() }}</span>
+    </div>
+  </main>
+</div>
