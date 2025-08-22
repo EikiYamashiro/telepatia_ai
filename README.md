@@ -85,6 +85,10 @@ cd web
 npm start
 ```
 
+**🎯 The application will be available at:**
+- **Frontend**: http://localhost:4200
+- **Backend**: http://localhost:5001
+
 ---
 
 ## 🔧 Detailed Setup Instructions
@@ -140,6 +144,23 @@ echo 'export FIREBASE_STORAGE_BUCKET="your-bucket-name"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
+#### **5. Run the Application**
+```bash
+# Terminal 1: Backend
+cd functions
+npm run serve
+
+# Terminal 2: Frontend (new terminal)
+cd web
+npm start
+```
+
+**💡 Alternative Backend Command:**
+```bash
+# If you prefer using Firebase CLI directly
+firebase emulators:start --only functions
+```
+
 ---
 
 ### **🍎 macOS**
@@ -175,6 +196,23 @@ echo 'export FIREBASE_STORAGE_BUCKET="your-bucket-name"' >> ~/.zshrc
 
 # Reload shell
 source ~/.zshrc
+```
+
+#### **5. Run the Application**
+```bash
+# Terminal 1: Backend
+cd functions
+npm run serve
+
+# Terminal 2: Frontend (new terminal)
+cd web
+npm start
+```
+
+**💡 Alternative Backend Command:**
+```bash
+# If you prefer using Firebase CLI directly
+firebase emulators:start --only functions
 ```
 
 ---
@@ -226,6 +264,45 @@ $env:FIREBASE_PROJECT_ID="your-project-id"
 $env:FIREBASE_STORAGE_BUCKET="your-bucket-name"
 ```
 
+#### **5. Run the Application**
+```cmd
+# Terminal 1: Backend
+cd functions
+npm run serve
+
+# Terminal 2: Frontend (new terminal)
+cd web
+npm start
+```
+
+**💡 Alternative Backend Command:**
+```cmd
+# If you prefer using Firebase CLI directly
+firebase emulators:start --only functions
+```
+
+---
+
+## ✅ **Verification & Testing**
+
+### **🔍 Check if everything is working:**
+
+#### **Backend Status:**
+- ✅ **Functions compiled successfully** should appear in terminal
+- ✅ **Local emulator running** at http://localhost:5001
+- ✅ **No error messages** in console
+
+#### **Frontend Status:**
+- ✅ **Angular compiled successfully** should appear in terminal
+- ✅ **Development server running** at http://localhost:4200
+- ✅ **Telepatía interface** loads in browser
+
+#### **Common Issues:**
+- ❌ **Port 5001 in use**: Kill process or change port
+- ❌ **Port 4200 in use**: Kill process or change port
+- ❌ **GEMINI_API_KEY not set**: Configure environment variable
+- ❌ **Node modules missing**: Run `npm install` in both directories
+
 ---
 
 ## 🔑 API Keys Setup
@@ -252,6 +329,50 @@ $env:FIREBASE_STORAGE_BUCKET="your-bucket-name"
 ---
 
 ## 🚀 Running the Application
+
+### **⚡ Quick Commands by Platform:**
+
+> **💡 Note**: You can use either `npm run serve` (runs the emulator from the functions directory) or `firebase emulators:start --only functions` (runs the emulator from the project root). Both achieve the same result.
+
+#### **🐧 Linux/macOS:**
+```bash
+# Terminal 1: Backend
+cd functions && npm run serve
+
+# Terminal 2: Frontend  
+cd web && npm start
+
+# Alternative Backend:
+# firebase emulators:start --only functions
+```
+
+#### **🪟 Windows:**
+```cmd
+# Terminal 1: Backend
+cd functions
+npm run serve
+
+# Terminal 2: Frontend
+cd web
+npm start
+
+# Alternative Backend:
+# firebase emulators:start --only functions
+```
+
+#### **🪟 Windows PowerShell:**
+```powershell
+# Terminal 1: Backend
+cd functions; npm run serve
+
+# Terminal 2: Frontend
+cd web; npm start
+
+# Alternative Backend:
+# firebase emulators:start --only functions
+```
+
+---
 
 ### **Backend (Firebase Functions)**
 
@@ -382,26 +503,46 @@ npm install
 
 ### **Platform-Specific Issues**
 
-#### **Linux: Permission Denied**
+#### **🐧 Linux: Permission Denied**
 ```bash
 # Fix npm permissions
 sudo chown -R $USER:$GROUP ~/.npm
 sudo chown -R $USER:$GROUP ~/.config
+
+# Alternative: Use nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+nvm install 18
+nvm use 18
 ```
 
-#### **macOS: Python Version Issues**
+#### **🍎 macOS: Python Version Issues**
 ```bash
 # Install Python 3
 brew install python3
 
 # Link python3 to python
 ln -s /usr/local/bin/python3 /usr/local/bin/python
+
+# Alternative: Use nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+nvm install 18
+nvm use 18
 ```
 
-#### **Windows: Path Issues**
-1. Ensure Node.js is in PATH
-2. Restart Command Prompt after installation
-3. Run as Administrator if needed
+#### **🪟 Windows: Path Issues**
+```cmd
+# Check if Node.js is in PATH
+where node
+where npm
+
+# If not found, restart Command Prompt after installation
+# Or run as Administrator
+
+# Alternative: Use nvm-windows
+# Download from: https://github.com/coreybutler/nvm-windows/releases
+nvm install 18.17.0
+nvm use 18.17.0
+```
 
 ---
 
