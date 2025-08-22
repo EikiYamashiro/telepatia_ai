@@ -78,7 +78,9 @@ export GEMINI_API_KEY="your-api-key-here"
 ```bash
 # Terminal 1: Backend
 cd functions
-npm run serve
+npm run build
+cd ..
+firebase emulators:start --only functions
 
 # Terminal 2: Frontend
 cd web
@@ -148,7 +150,9 @@ source ~/.bashrc
 ```bash
 # Terminal 1: Backend
 cd functions
-npm run serve
+npm run build
+cd ..
+firebase emulators:start --only functions
 
 # Terminal 2: Frontend (new terminal)
 cd web
@@ -202,7 +206,9 @@ source ~/.zshrc
 ```bash
 # Terminal 1: Backend
 cd functions
-npm run serve
+npm run build
+cd ..
+firebase emulators:start --only functions
 
 # Terminal 2: Frontend (new terminal)
 cd web
@@ -268,7 +274,9 @@ $env:FIREBASE_STORAGE_BUCKET="your-bucket-name"
 ```cmd
 # Terminal 1: Backend
 cd functions
-npm run serve
+npm run build
+cd ..
+firebase emulators:start --only functions
 
 # Terminal 2: Frontend (new terminal)
 cd web
